@@ -30,18 +30,19 @@
         }
 
         section {
-            /* padding-top: 20px; */
-            /* padding-left: 10px; */
-            /* padding-bottom: 10px; */
-
             /* //background-color: #c89e6c; */
-            width: 100%;
+            width: 95vw;
             height: auto;
-            padding: 10px auto;
+            /* padding: 10px auto; */
             margin: 2vh 1vw;
 
         }
-
+        .address{
+            /* width: 90vw; */
+            word-wrap: break-word; /* 解决连续英文字符串无法换行的问题 */
+            /* word-break: break-all; */
+            /* overflow: hidden; */
+        } 
         .para {
             padding-left: 5vw;
             padding-right: 5vw;
@@ -95,8 +96,13 @@
 
     <section>
         <h3>一号厅</h3>
-        <p><a target="_blank" title="点击打开观看" href="https://v.qq.com/x/page/d07120hvznd.html">腾讯PC包厢</a></p>
-        <p>地址：https://v.qq.com/x/page/d07120hvznd.html</p>
+        <p>
+            <a target="_blank" title="点击打开观看" href="https://v.qq.com/x/page/d07120hvznd.html">腾讯PC包厢</a>
+        </p>
+        <div class="address">
+            <p>地址：https://v.qq.com/x/page/d07120hvznd.html</p>
+        </div>
+        
         <iframe src="https://m.v.qq.com/play.html?&vid=d07120hvznd&ptag=v_qq_com%23v.play.adaptor%233" sandbox=""
             frameborder="0" allowFullScreen="true" width="auto" height="auto">
         </iframe>
@@ -107,7 +113,10 @@
             <a target="_blank" title="点击打开观看" 
             href="https://www.miguvideo.com/wap/resource/pc/detail/miguplay.jsp?cid=627850071">migu包厢</a>
         </p>
-        <p>地址：https://www.miguvideo.com/wap/resource/pc/detail/miguplay.jsp?cid=627850071</p>
+        <!-- <div class="address"> -->
+                <p class="address">地址：https://www.miguvideo.com/wap/resource/pc/detail/miguplay.jsp?cid=627850071</p>
+        <!-- </div> -->
+        
         <iframe src="https://www.miguvideo.com/wap/resource/pc/detail/miguplay.jsp?cid=627850071" sandbox=""
             allowfullscreen="true" frameborder="0" width="auto" height="auto">
         </iframe>
