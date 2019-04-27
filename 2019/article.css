@@ -4,7 +4,7 @@
     padding-left: 5vw;
     padding-right: 5vw;
     text-indent: 2em;
-    line-height: 160%;
+    line-height: 170%;
 }
 
 /* 解决连续英文字符串无法换行的问题。比如网页地址 */
