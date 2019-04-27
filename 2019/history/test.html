@@ -48,10 +48,24 @@
         .sign {
             text-align: center;
         }
+        #head{
+            padding: 20px 50px 100px 20px;
+        }
     </style>
 </head>
 
 <body>
+    <header id="head">
+        <details>
+            <summary>重要通知</summary>
+            <p>由于上一期个人网站被微信拦截，给各位造成了不好的浏览体验，不便之处在此表示歉意。</p>
+            <p>以后如再遇到类似的情况，则无需通过微信，直接使用浏览器访问本页面即可。您也可以将该页面添加到收藏夹中供长期备用，
+                还望互相转告，感谢您的惠存。</p>
+            <p>本页面地址：<br>
+                https://raphael-chen.github.io/2019/Julian's_Cinema.html
+            </p>
+        </details>
+    </header>
     <article>
         <p class="dialogue">
             -------------------------------------------<br>
@@ -59,15 +73,15 @@
         </p>
         <!-- <hr> -->
         <p class="para">
-            这是一部没有台词的影片，甚至连演员都不是人，每个镜头都展示着它们最真实的生存状态。
+            这是一部没有台词的影片，甚至连演员都不是人类，但每个镜头都展示着它们最真实的生存状态。
             纵然如此，也无法磨灭千百万年来深植基因中的情感。
         </p>
-        <p class="para">当音乐响起，就让我们启程吧</p>
+        <p class="para">当音乐响起，就让我们启程吧。今天的影片适合与家人一起观看。</p>
 
         <div class="sign">↓↓↓</div>
     </article>
     <br>
-
+<!-- 每个iframe中不要添加sandbox属性，否则播放会有问题 -->
     <!-- <section>
         <h3>三号厅</h3>
         <p><a target="_blank" title="点击打开观看" href="http://www.le.com/ptv/vplay/832095.html">乐视PC包厢</a></p>
@@ -77,7 +91,7 @@
     </section> -->
     <!--bilibili视频框架-->
     <section> 
-        <h3>二号厅</h3>
+        <h3>一号厅</h3>
         <p>
             <a target="_blank" href="https://www.bilibili.com/video/av13651349">
             B站 PC包厢</a>
@@ -92,12 +106,12 @@
 				framespacing="0" 
 				frameborder="no" 
 				width="100%" 
-                height="auto">
+                height="300px">
         </iframe>
     </section>
 
     <section>
-        <h3>一号厅</h3>
+        <h3>二号厅</h3>
         <p>
             <a target="_blank" title="点击打开观看" href="https://v.qq.com/x/cover/46sb6j1t81unu2y.html">腾讯PC包厢</a>
         </p>
@@ -125,7 +139,7 @@
     </section>
     
     <section>
-        <h3>二号厅</h3>
+        <h3>三号厅</h3>
         <p>
             <a target="_blank" title="点击打开观看" href="https://www.iqiyi.com/v_19rrho3cr0.html">爱奇艺PC包厢</a>
         </p>
