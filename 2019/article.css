@@ -13,3 +13,8 @@
     /* word-break: break-all; */
     /* overflow: hidden; */
 }
+
+.trytocenter{
+    max-width: 600px;
+    margin: 0 auto; 
+}
