@@ -96,21 +96,21 @@ body.typora-export {
 
 @media screen and (max-width: 500px) {
     body.typora-export {
-padding-left: 0px;
-padding-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     #write {
-padding-left: 20px;
-padding-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .CodeMirror-sizer {
-margin-left: 0px !important;
+        margin-left: 0px !important;
     }
 
     .CodeMirror-gutters {
-display: none !important;
+        display: none !important;
     }
 }
 
@@ -458,39 +458,39 @@ li> :first-child {
 
     body,
     html {
-border: 1px solid transparent;
-height: 99%;
-break-after: avoid;
-break-before: avoid;
+        border: 1px solid transparent;
+        height: 99%;
+        break-after: avoid;
+        break-before: avoid;
     }
 
     #write {
-margin-top: 0px;
-padding-top: 0px;
-border-color: transparent !important;
+        margin-top: 0px;
+        padding-top: 0px;
+        border-color: transparent !important;
     }
 
     .typora-export * {
--webkit-print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
     }
 
     html.blink-to-pdf {
-font-size: 13px;
+        font-size: 13px;
     }
 
     .typora-export #write {
-padding-left: 32px;
-padding-right: 32px;
-padding-bottom: 0px;
-break-after: avoid;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 0px;
+        break-after: avoid;
     }
 
     .typora-export #write::after {
-height: 0px;
+        height: 0px;
     }
 
     @page {
-margin: 20mm 0px;
+        margin: 20mm 0px;
     }
 }
 
@@ -626,19 +626,19 @@ p>.md-image:only-child {
 
 @media screen and (max-width: 48em) {
     .md-toc-h3 .md-toc-inner {
-margin-left: 3.5em;
+        margin-left: 3.5em;
     }
 
     .md-toc-h4 .md-toc-inner {
-margin-left: 5em;
+        margin-left: 5em;
     }
 
     .md-toc-h5 .md-toc-inner {
-margin-left: 6.5em;
+        margin-left: 6.5em;
     }
 
     .md-toc-h6 .md-toc-inner {
-margin-left: 8em;
+        margin-left: 8em;
     }
 }
 
