@@ -188,6 +188,8 @@ h6 {
 
 p {
     orphans: 4;
+    text-indent: 2em;
+    line-height: 170%;
 }
 
 h1 {
