@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>datetime</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        function todayTime() {
+            var date = new Date();
+            var curYear = date.getFullYear();
+            var curMonth = date.getMonth() + 1;
+            var curDate = date.getDate();
+            if (curMonth < 10) {
+                curMonth = '0' + curMonth;
+            }
+            if (curDate < 10) {
+                curDate = '0' + curDate;
+            }
+            var curHours = date.getHours();
+            var curMinutes = date.getMinutes();
+            // var curtime = curYear + ' 年 ' + curMonth + ' 月 ' + curDate + ' 日' + curHours + '时 ' + curMinutes + '分 ';
+            var curtime = curYear + '/' + curMonth + '/' + curDate + '/' + curHours + '/' + curMinutes + '/';
+            return curtime;
+        }
+        document.getElementById("demo").innerHTML = todayTime();
+
+    </script>
+</body>
+
+</html>
