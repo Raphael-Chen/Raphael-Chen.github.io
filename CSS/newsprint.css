@@ -751,7 +751,7 @@ a.md-print-anchor {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    zoom: 90%;
+    /* zoom: 90%;  'zoom' is not supported by Firefox, Firefox Android. */
     text-indent: 0px;
     text-align: left;
     text-transform: none;
