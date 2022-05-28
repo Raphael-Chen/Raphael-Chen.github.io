@@ -1,0 +1,1502 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+    <title>README</title>
+    <link
+        href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext'
+        rel='stylesheet' type='text/css' />
+    <style type='text/css'>
+        html {
+            overflow-x: initial !important;
+        }
+
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --select-text-bg-color: #B5D6FC;
+            --select-text-font-color: auto;
+            --monospace: "Lucida Console", Consolas, "Courier", monospace;
+        }
+
+        html {
+            font-size: 14px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: auto;
+            bottom: 0px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            font-size: 1rem;
+            line-height: 1.42857;
+            overflow-x: hidden;
+            background: inherit;
+            tab-size: 4;
+        }
+
+        iframe {
+            margin: auto;
+        }
+
+        a.url {
+            word-break: break-all;
+        }
+
+        a:active,
+        a:hover {
+            outline: 0px;
+        }
+
+        .in-text-selection,
+        ::selection {
+            text-shadow: none;
+            background: var(--select-text-bg-color);
+            color: var(--select-text-font-color);
+        }
+
+        #write {
+            margin: 0px auto;
+            height: auto;
+            width: inherit;
+            word-break: normal;
+            word-wrap: break-word;
+            position: relative;
+            white-space: normal;
+            overflow-x: visible;
+            padding-top: 40px;
+        }
+
+        #write.first-line-indent p {
+            text-indent: 2em;
+        }
+
+        #write.first-line-indent li p,
+        #write.first-line-indent p * {
+            text-indent: 0px;
+        }
+
+        #write.first-line-indent li {
+            margin-left: 2em;
+        }
+
+        .for-image #write {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        body.typora-export {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .typora-export .footnote-line,
+        .typora-export li,
+        .typora-export p {
+            white-space: pre-wrap;
+        }
+
+        @media screen and (max-width: 500px) {
+            body.typora-export {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            #write {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .CodeMirror-sizer {
+                margin-left: 0px !important;
+            }
+
+            .CodeMirror-gutters {
+                display: none !important;
+            }
+        }
+
+        #write li>figure:first-child {
+            margin-top: -20px;
+        }
+
+        #write ol,
+        #write ul {
+            position: relative;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            color: inherit;
+            font-style: inherit;
+            font-variant: inherit;
+            font-weight: inherit;
+            font-stretch: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-family: inherit;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            line-height: normal;
+            padding: 0px;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6,
+        #write p,
+        #write pre {
+            width: inherit;
+        }
+
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6,
+        #write p {
+            position: relative;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            break-after: avoid-page;
+            break-inside: avoid;
+            orphans: 2;
+        }
+
+        p {
+            orphans: 4;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        h6 {
+            font-size: 1rem;
+        }
+
+        .md-math-block,
+        .md-rawblock,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .md-blockmeta {
+            color: rgb(204, 204, 204);
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        sup.md-footnote {
+            padding: 2px 4px;
+            background-color: rgba(238, 238, 238, 0.7);
+            color: rgb(85, 85, 85);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        sup.md-footnote a,
+        sup.md-footnote a:hover {
+            color: inherit;
+            text-transform: inherit;
+            text-decoration: inherit;
+        }
+
+        #write input[type="checkbox"] {
+            cursor: pointer;
+            width: inherit;
+            height: inherit;
+        }
+
+        figure {
+            overflow-x: auto;
+            margin: 1.2em 0px;
+            max-width: calc(100% + 16px);
+            padding: 0px;
+        }
+
+        figure>table {
+            margin: 0px !important;
+        }
+
+        tr {
+            break-inside: avoid;
+            break-after: auto;
+        }
+
+        thead {
+            display: table-header-group;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+            width: 100%;
+            overflow: auto;
+            break-inside: auto;
+            text-align: left;
+        }
+
+        table.md-table td {
+            min-width: 32px;
+        }
+
+        .CodeMirror-gutters {
+            border-right: 0px;
+            background-color: inherit;
+        }
+
+        .CodeMirror-linenumber {
+            user-select: none;
+        }
+
+        .CodeMirror {
+            text-align: left;
+        }
+
+        .CodeMirror-placeholder {
+            opacity: 0.3;
+        }
+
+        .CodeMirror pre {
+            padding: 0px 4px;
+        }
+
+        .CodeMirror-lines {
+            padding: 0px;
+        }
+
+        div.hr:focus {
+            cursor: none;
+        }
+
+        #write pre {
+            white-space: pre-wrap;
+        }
+
+        #write.fences-no-line-wrapping pre {
+            white-space: pre;
+        }
+
+        #write pre.ty-contain-cm {
+            white-space: normal;
+        }
+
+        .CodeMirror-gutters {
+            margin-right: 4px;
+        }
+
+        .md-fences {
+            font-size: 0.9rem;
+            display: block;
+            break-inside: avoid;
+            text-align: left;
+            overflow: visible;
+            white-space: pre;
+            background: inherit;
+            position: relative !important;
+        }
+
+        .md-diagram-panel {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 8px;
+            overflow-x: auto;
+        }
+
+        #write .md-fences.mock-cm {
+            white-space: pre-wrap;
+        }
+
+        .md-fences.md-fences-with-lineno {
+            padding-left: 0px;
+        }
+
+        #write.fences-no-line-wrapping .md-fences.mock-cm {
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        .md-fences.mock-cm.md-fences-with-lineno {
+            padding-left: 8px;
+        }
+
+        .CodeMirror-line,
+        twitterwidget {
+            break-inside: avoid;
+        }
+
+        .footnotes {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .footnotes+.footnotes {
+            margin-top: 0px;
+        }
+
+        .md-reset {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            outline: 0px;
+            vertical-align: top;
+            background: 0px 0px;
+            text-decoration: none;
+            text-shadow: none;
+            float: none;
+            position: static;
+            width: auto;
+            height: auto;
+            white-space: nowrap;
+            cursor: inherit;
+            -webkit-tap-highlight-color: transparent;
+            line-height: normal;
+            font-weight: 400;
+            text-align: left;
+            box-sizing: content-box;
+            direction: ltr;
+        }
+
+        li div {
+            padding-top: 0px;
+        }
+
+        blockquote {
+            margin: 1rem 0px;
+        }
+
+        li .mathjax-block,
+        li p {
+            margin: 0.5rem 0px;
+        }
+
+        li {
+            margin: 0px;
+            position: relative;
+        }
+
+        blockquote> :last-child {
+            margin-bottom: 0px;
+        }
+
+        blockquote> :first-child,
+        li> :first-child {
+            margin-top: 0px;
+        }
+
+        .footnotes-area {
+            color: rgb(136, 136, 136);
+            margin-top: 0.714rem;
+            padding-bottom: 0.143rem;
+            white-space: normal;
+        }
+
+        #write .footnote-line {
+            white-space: pre-wrap;
+        }
+
+        @media print {
+
+            body,
+            html {
+                border: 1px solid transparent;
+                height: 99%;
+                break-after: avoid;
+                break-before: avoid;
+            }
+
+            #write {
+                margin-top: 0px;
+                padding-top: 0px;
+                border-color: transparent !important;
+            }
+
+            .typora-export * {
+                -webkit-print-color-adjust: exact;
+            }
+
+            html.blink-to-pdf {
+                font-size: 13px;
+            }
+
+            .typora-export #write {
+                padding-left: 32px;
+                padding-right: 32px;
+                padding-bottom: 0px;
+                break-after: avoid;
+            }
+
+            .typora-export #write::after {
+                height: 0px;
+            }
+
+            @page {
+                margin: 20mm 0px;
+            }
+        }
+
+        .footnote-line {
+            margin-top: 0.714em;
+            font-size: 0.7em;
+        }
+
+        a img,
+        img a {
+            cursor: pointer;
+        }
+
+        pre.md-meta-block {
+            font-size: 0.8rem;
+            min-height: 0.8rem;
+            white-space: pre-wrap;
+            background: rgb(204, 204, 204);
+            display: block;
+            overflow-x: hidden;
+        }
+
+        p>.md-image:only-child:not(.md-img-error) img,
+        p>img:only-child {
+            display: block;
+            margin: auto;
+        }
+
+        p>.md-image:only-child {
+            display: inline-block;
+            width: 100%;
+        }
+
+        #write .MathJax_Display {
+            margin: 0.8em 0px 0px;
+        }
+
+        .md-math-block {
+            width: 100%;
+        }
+
+        .md-math-block:not(:empty)::after {
+            display: none;
+        }
+
+        [contenteditable="true"]:active,
+        [contenteditable="true"]:focus {
+            outline: 0px;
+            box-shadow: none;
+        }
+
+        .md-task-list-item {
+            position: relative;
+            list-style-type: none;
+        }
+
+        .task-list-item.md-task-list-item {
+            padding-left: 0px;
+        }
+
+        .md-task-list-item>input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin-left: -1.2em;
+            margin-top: calc(1em - 10px);
+            border: none;
+        }
+
+        .math {
+            font-size: 1rem;
+        }
+
+        .md-toc {
+            min-height: 3.58rem;
+            position: relative;
+            font-size: 0.9rem;
+            border-radius: 10px;
+        }
+
+        .md-toc-content {
+            position: relative;
+            margin-left: 0px;
+        }
+
+        .md-toc-content::after,
+        .md-toc::after {
+            display: none;
+        }
+
+        .md-toc-item {
+            display: block;
+            color: rgb(65, 131, 196);
+        }
+
+        .md-toc-item a {
+            text-decoration: none;
+        }
+
+        .md-toc-inner:hover {
+            text-decoration: underline;
+        }
+
+        .md-toc-inner {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .md-toc-h1 .md-toc-inner {
+            margin-left: 0px;
+            font-weight: 700;
+        }
+
+        .md-toc-h2 .md-toc-inner {
+            margin-left: 2em;
+        }
+
+        .md-toc-h3 .md-toc-inner {
+            margin-left: 4em;
+        }
+
+        .md-toc-h4 .md-toc-inner {
+            margin-left: 6em;
+        }
+
+        .md-toc-h5 .md-toc-inner {
+            margin-left: 8em;
+        }
+
+        .md-toc-h6 .md-toc-inner {
+            margin-left: 10em;
+        }
+
+        @media screen and (max-width: 48em) {
+            .md-toc-h3 .md-toc-inner {
+                margin-left: 3.5em;
+            }
+
+            .md-toc-h4 .md-toc-inner {
+                margin-left: 5em;
+            }
+
+            .md-toc-h5 .md-toc-inner {
+                margin-left: 6.5em;
+            }
+
+            .md-toc-h6 .md-toc-inner {
+                margin-left: 8em;
+            }
+        }
+
+        a.md-toc-inner {
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+
+        .footnote-line a:not(.reversefootnote) {
+            color: inherit;
+        }
+
+        .md-attr {
+            display: none;
+        }
+
+        .md-fn-count::after {
+            content: ".";
+        }
+
+        code,
+        pre,
+        samp,
+        tt {
+            font-family: var(--monospace);
+        }
+
+        kbd {
+            margin: 0px 0.1em;
+            padding: 0.1em 0.6em;
+            font-size: 0.8em;
+            color: rgb(36, 39, 41);
+            background: rgb(255, 255, 255);
+            border: 1px solid rgb(173, 179, 185);
+            border-radius: 3px;
+            box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+
+        .md-comment {
+            color: rgb(162, 127, 3);
+            opacity: 0.8;
+            font-family: var(--monospace);
+        }
+
+        code {
+            text-align: left;
+            vertical-align: initial;
+        }
+
+        a.md-print-anchor {
+            white-space: pre !important;
+            border-width: initial !important;
+            border-style: none !important;
+            border-color: initial !important;
+            display: inline-block !important;
+            position: absolute !important;
+            width: 1px !important;
+            right: 0px !important;
+            outline: 0px !important;
+            background: 0px 0px !important;
+            text-decoration: initial !important;
+            text-shadow: initial !important;
+        }
+
+        .md-inline-math .MathJax_SVG .noError {
+            display: none !important;
+        }
+
+        .html-for-mac .inline-math-svg .MathJax_SVG {
+            vertical-align: 0.2px;
+        }
+
+        .md-math-block .MathJax_SVG_Display {
+            text-align: center;
+            margin: 0px;
+            position: relative;
+            text-indent: 0px;
+            max-width: none;
+            max-height: none;
+            min-height: 0px;
+            min-width: 100%;
+            width: auto;
+            overflow-y: hidden;
+            display: block !important;
+        }
+
+        .MathJax_SVG_Display,
+        .md-inline-math .MathJax_SVG_Display {
+            width: auto;
+            margin: inherit;
+            display: inline-block !important;
+        }
+
+        .MathJax_SVG .MJX-monospace {
+            font-family: var(--monospace);
+        }
+
+        .MathJax_SVG .MJX-sans-serif {
+            font-family: sans-serif;
+        }
+
+        .MathJax_SVG {
+            display: inline;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            zoom: 90%;
+            text-indent: 0px;
+            text-align: left;
+            text-transform: none;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            float: none;
+            direction: ltr;
+            max-width: none;
+            max-height: none;
+            min-width: 0px;
+            min-height: 0px;
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .MathJax_SVG * {
+            transition: none;
+        }
+
+        .MathJax_SVG_Display svg {
+            vertical-align: middle !important;
+            margin-bottom: 0px !important;
+        }
+
+        .os-windows.monocolor-emoji .md-emoji {
+            font-family: "Segoe UI Symbol", sans-serif;
+        }
+
+        .md-diagram-panel>svg {
+            max-width: 100%;
+        }
+
+        [lang="mermaid"] svg,
+        [lang="flow"] svg {
+            max-width: 100%;
+        }
+
+        [lang="mermaid"] .node text {
+            font-size: 1rem;
+        }
+
+        table tr th {
+            border-bottom: 0px;
+        }
+
+        video {
+            max-width: 100%;
+            display: block;
+            margin: 0px auto;
+        }
+
+        iframe {
+            max-width: 100%;
+            width: 100%;
+            border: none;
+        }
+
+        .highlight td,
+        .highlight tr {
+            border: 0px;
+        }
+
+
+        :root {
+            --active-file-bg-color: rgba(32, 43, 51, 0.63);
+            --active-file-text-color: white;
+            --bg-color: #f3f2ee;
+            --text-color: #1f0909;
+            --control-text-color: #444;
+            --rawblock-edit-panel-bd: #e5e5e5;
+            --select-text-bg-color: rgba(32, 43, 51, 0.63);
+            --select-text-font-color: white;
+        }
+
+        pre {
+            --select-text-bg-color: #36284e;
+            --select-text-font-color: #fff;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            background-color: rgb(243, 242, 238);
+            font-family: "PT Serif", "Times New Roman", Times, serif;
+            color: rgb(31, 9, 9);
+            line-height: 1.5em;
+        }
+
+        #write {
+            max-width: 40em;
+        }
+
+        ol li {
+            list-style-type: decimal;
+            list-style-position: outside;
+        }
+
+        ul li {
+            list-style-type: disc;
+            list-style-position: outside;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote::before,
+        blockquote::after,
+        q::before,
+        q::after {
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 1.875em;
+            line-height: 1.6em;
+            margin-top: 2em;
+        }
+
+        h2,
+        h3 {
+            font-size: 1.3125em;
+            line-height: 1.15;
+            margin-top: 2.28571em;
+            margin-bottom: 1.15em;
+        }
+
+        h3 {
+            font-weight: normal;
+        }
+
+        h4 {
+            font-size: 1.125em;
+            margin-top: 2.67em;
+        }
+
+        h5,
+        h6 {
+            font-size: 1em;
+        }
+
+        h1 {
+            border-bottom: 1px solid;
+            margin-bottom: 1.875em;
+            padding-bottom: 0.8125em;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(6, 85, 136);
+        }
+
+        a:hover,
+        a:active {
+            text-decoration: underline;
+        }
+
+        p,
+        blockquote,
+        .md-fences {
+            margin-bottom: 1.5em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 1.5em;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 5px solid;
+            margin-left: 2em;
+            padding-left: 1em;
+        }
+
+        ul,
+        ol {
+            margin: 0px 0px 1.5em 1.5em;
+        }
+
+        .md-meta,
+        .md-before,
+        .md-after {
+            color: rgb(153, 153, 153);
+        }
+
+        table {
+            margin-bottom: 1.5em;
+            font-size: 1em;
+        }
+
+        thead th,
+        tfoot th {
+            padding: 0.25em 0.25em 0.25em 0.4em;
+            text-transform: uppercase;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        td {
+            vertical-align: top;
+            padding: 0.25em 0.25em 0.25em 0.4em;
+        }
+
+        code,
+        .md-fences {
+            background-color: rgb(218, 218, 218);
+        }
+
+        code {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        .md-fences {
+            margin-left: 2em;
+            margin-bottom: 3em;
+            padding-left: 1ch;
+            padding-right: 1ch;
+        }
+
+        pre,
+        code,
+        tt {
+            font-size: 0.875em;
+            line-height: 1.71429em;
+        }
+
+        h1 {
+            line-height: 1.3em;
+            font-weight: normal;
+            margin-bottom: 0.5em;
+        }
+
+        p+ul,
+        p+ol {
+            margin-top: 0.5em;
+        }
+
+        h3+ul,
+        h4+ul,
+        h5+ul,
+        h6+ul,
+        h3+ol,
+        h4+ol,
+        h5+ol,
+        h6+ol {
+            margin-top: 0.5em;
+        }
+
+        li>ul,
+        li>ol {
+            margin-top: inherit;
+            margin-bottom: 0px;
+        }
+
+        li ol>li {
+            list-style-type: lower-alpha;
+        }
+
+        li li ol>li {
+            list-style-type: lower-roman;
+        }
+
+        h2,
+        h3 {
+            margin-bottom: 0.75em;
+        }
+
+        hr {
+            border-top: none;
+            border-right: none;
+            border-bottom: 1px solid;
+            border-left: none;
+        }
+
+        h1 {
+            border-color: rgb(197, 197, 197);
+        }
+
+        blockquote {
+            border-color: rgb(186, 186, 186);
+            color: rgb(101, 101, 101);
+        }
+
+        blockquote ul,
+        blockquote ol {
+            margin-left: 0px;
+        }
+
+        .ty-table-edit {
+            background-color: transparent;
+        }
+
+        thead {
+            background-color: rgb(218, 218, 218);
+        }
+
+        tr:nth-child(2n) {
+            background: rgb(232, 231, 231);
+        }
+
+        hr {
+            border-color: rgb(197, 197, 197);
+        }
+
+        .task-list {
+            padding-left: 1rem;
+        }
+
+        .md-task-list-item {
+            padding-left: 1.5rem;
+            list-style-type: none;
+        }
+
+        .md-task-list-item>input::before {
+            content: "√";
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.6rem;
+            vertical-align: middle;
+            text-align: center;
+            color: rgb(221, 221, 221);
+            background-color: rgb(243, 242, 238);
+        }
+
+        .md-task-list-item>input:checked::before,
+        .md-task-list-item>input[checked]::before {
+            color: inherit;
+        }
+
+        #write pre.md-meta-block {
+            min-height: 1.875rem;
+            color: rgb(85, 85, 85);
+            border: 0px;
+            background: transparent;
+            margin-left: 1em;
+            margin-top: 1em;
+        }
+
+        .md-image>.md-meta {
+            color: rgb(155, 81, 70);
+        }
+
+        .md-image>.md-meta {
+            font-family: Menlo, "Ubuntu Mono", Consolas, "Courier New", "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", serif;
+        }
+
+        #write>h3.md-focus::before {
+            left: -1.5rem;
+            color: rgb(153, 153, 153);
+            border-color: rgb(153, 153, 153);
+        }
+
+        #write>h4.md-focus::before {
+            left: -1.5rem;
+            top: 0.25rem;
+            color: rgb(153, 153, 153);
+            border-color: rgb(153, 153, 153);
+        }
+
+        #write>h5.md-focus::before {
+            left: -1.5rem;
+            color: rgb(153, 153, 153);
+            border-color: rgb(153, 153, 153);
+        }
+
+        #write>h6.md-focus::before {
+            left: -1.5rem;
+            top: 0.3125rem;
+            color: rgb(153, 153, 153);
+            border-color: rgb(153, 153, 153);
+        }
+
+        .md-toc:focus .md-toc-content {
+            margin-top: 19px;
+        }
+
+        .md-toc-content:empty::before {
+            color: rgb(6, 85, 136);
+        }
+
+        .md-toc-item {
+            color: rgb(6, 85, 136);
+        }
+
+        #write div.md-toc-tooltip {
+            background-color: rgb(243, 242, 238);
+        }
+
+        #typora-sidebar {
+            background-color: rgb(243, 242, 238);
+            box-shadow: rgba(0, 0, 0, 0.376) 0px 6px 12px;
+        }
+
+        .pin-outline #typora-sidebar {
+            background: inherit;
+            box-shadow: none;
+            border-right: 1px dashed;
+        }
+
+        .pin-outline #typora-sidebar:hover .outline-title-wrapper {
+            border-left: 1px dashed;
+        }
+
+        .outline-item:hover {
+            background-color: rgb(218, 218, 218);
+            border-left: 28px solid rgb(218, 218, 218);
+            border-right: 18px solid rgb(218, 218, 218);
+        }
+
+        .typora-node .outline-item:hover {
+            border-right: 28px solid rgb(218, 218, 218);
+        }
+
+        .outline-expander::before {
+            content: "";
+            font-family: FontAwesome;
+            font-size: 14px;
+            top: 1px;
+        }
+
+        .outline-expander:hover::before,
+        .outline-item-open>.outline-item>.outline-expander::before {
+            content: "";
+        }
+
+        .modal-content {
+            background-color: rgb(243, 242, 238);
+        }
+
+        .auto-suggest-container ul li {
+            list-style-type: none;
+        }
+
+        .megamenu-menu,
+        #top-titlebar,
+        #top-titlebar *,
+        .megamenu-content {
+            background: rgb(243, 242, 238);
+            color: rgb(31, 9, 9);
+        }
+
+        .megamenu-menu-header {
+            border-bottom: 1px dashed rgb(32, 43, 51);
+        }
+
+        .megamenu-menu {
+            box-shadow: none;
+            border-right: 1px dashed;
+        }
+
+        header,
+        .context-menu,
+        .megamenu-content,
+        footer {
+            font-family: "PT Serif", "Times New Roman", Times, serif;
+            color: rgb(31, 9, 9);
+        }
+
+        #megamenu-back-btn {
+            color: rgb(31, 9, 9);
+            border-color: rgb(31, 9, 9);
+        }
+
+        .megamenu-menu-header #megamenu-menu-header-title::before {
+            color: rgb(31, 9, 9);
+        }
+
+        .megamenu-menu-list li a:hover,
+        .megamenu-menu-list li a.active {
+            color: inherit;
+            background-color: rgb(232, 231, 223);
+        }
+
+        .long-btn:hover {
+            background-color: rgb(232, 231, 223);
+        }
+
+        #recent-file-panel tbody tr:nth-child(2n-1) {
+            background-color: transparent !important;
+        }
+
+        .megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+            color: inherit;
+        }
+
+        .megamenu-menu-panel .btn {
+            background-color: rgb(210, 209, 209);
+        }
+
+        .btn-default {
+            background-color: transparent;
+        }
+
+        .typora-sourceview-on #toggle-sourceview-btn,
+        .ty-show-word-count #footer-word-count {
+            background: rgb(199, 197, 197);
+        }
+
+        #typora-quick-open {
+            background-color: inherit;
+        }
+
+        .md-diagram-panel {
+            margin-top: 8px;
+        }
+
+        .file-list-item-file-name {
+            font-weight: initial;
+        }
+
+        .file-list-item-summary {
+            opacity: 1;
+        }
+
+        .file-list-item {
+            color: rgb(119, 119, 119);
+        }
+
+        .file-list-item.active {
+            background-color: inherit;
+            color: black;
+        }
+
+        .ty-side-sort-btn.active {
+            background-color: inherit;
+        }
+
+        .file-list-item.active .file-list-item-file-name {
+            font-weight: bold;
+        }
+
+        .file-list-item {
+            opacity: 1 !important;
+        }
+
+        .file-library-node.active>.file-node-background {
+            background-color: var(--active-file-bg-color);
+        }
+
+        .file-tree-node.active>.file-node-content {
+            color: var(--active-file-text-color);
+        }
+
+        .md-task-list-item>input {
+            margin-left: -1.6em;
+            margin-top: calc(1rem - 12px);
+        }
+
+        input {
+            border: 1px solid rgb(170, 170, 170);
+        }
+
+        .megamenu-menu-header #megamenu-menu-header-title,
+        .megamenu-menu-header:hover,
+        .megamenu-menu-header:focus {
+            color: inherit;
+        }
+
+        .dropdown-menu .divider {
+            border-color: rgb(229, 229, 229);
+        }
+
+        .os-windows-7 strong,
+        .os-windows-7 strong {
+            font-weight: 760;
+        }
+
+
+
+
+
+        .typora-export li,
+        .typora-export p,
+        .typora-export,
+        .footnote-line {
+            white-space: normal;
+        }
+    </style>
+</head>
+
+<body class='typora-export os-windows'>
+    <div id='write' class='is-node'>
+        <h1><a name='header-n0' class='md-header-anchor '></a>The road of revival in C programs</h1>
+        <p><a href='README_EN.md'>-&gt; English Version</a></p>
+        <p>因近期本区无法访问Github网站（可能因海底电缆中断导致？？），导致本项目以及其他项目（电影）已修改的代码及文件无法上传提交（本文件由别处友人代为提交），引起的诸多不便敬请多谅解，待问题解决后延期提交，望知悉。
+        </p>
+        <p>另：个人网站可以正常访问。</p>
+        <p> 2022-05-25</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>以下文字为项目描述，可以忽略。</p>
+        <p>&nbsp;</p>
+        <p>由于该项目参与关注人数太少，故从本次开始每周更新改为双周更新。13/05/2021</p>
+        <p>当我决定，再次重新拾起这门“古老”的语言，心中感慨万千。事物的兴衰交替本是常态，一门编程语言也不例外。可是，这门传统语言的凋零并非通常意义上落后产能的淘汰。相反，你依然可以在各大编程语言排行榜看到C的身影，它甚至依然是各大操作系统和各种其他语言编译器和解释器的御用开发语言。但是事实上，它的使用者却是越来越少了。思考良久，我想除了前些年C语言自身的停滞不前，没有与时俱进，其次就得归功于中国IT行业的浮躁和急功近利——钟情于照搬国外整套技术架构，以及底层硬件制造能力的缺失（因为C语言最常被用来做一些基础建设:例如硬件驱动和系统应用以及操作系统的编写），当然还少不了资本的推波助澜。或许你可以借助当下的许多前台语言，开发出令人眼花缭乱的视觉效果，但是你永远也找不到一种语言替代C的简洁与高效以及通用性。总结成一句话，C语言的落末只不过是国外大厂之间利益博弈的结果，另一个资本的弃儿而已。否则，为什么谷歌要在安卓平台引入新的Kotlin语言？是现有的Java不够用吗？很明显，Java的版权仍在Oracle的手中，谷歌是害怕哪天两家翻了脸，被断了开发语言的后路那就真的惨了。想想吧，有多少存量的APP不是Java语言开发的？作为第三方的我们，其实根本就不需要那么多乱七八糟的编程语言。重复造轮子（编程语言）是一种对生命与社会资源的严重浪费！
+        </p>
+        <p>对于这门语言的误解，过度的神话，我觉得，是时候来一次了结了。当下移动互联网正在力图打造一个低效的前端语言帝国，开发产品的速度是上去了，但产品运行的效率却愈发低下了。尤其是那些寄生在安卓系统下的国产Java
+            APP，无节制地加入很多普通用户用不着的新功能（例如，商品推荐算法啦，收集用户个人信息的模块等等），同时也将安卓机的硬件配置不断拉高，但令人不快的操作卡顿却从来都未曾消除。相反，由于基于苹果的<code>Objective-C</code>应用架构，iOS使得它的用户们在更低的硬件配置上获得更流畅的操作体验（即在<strong>相同硬件配置</strong>下的安卓机与iPhone，iPhone明显操作流畅度更高<sup
+                class='md-footnote'><a href='#dfref-footnote-1'
+                    name='ref-footnote-1'>1</a></sup>），如果普通大众了解到这个事实，会不会觉得很讽刺？</p>
+        <p>基于以上原因，我建立了这个项目，并希望因此Github上会产生更多的C语言应用项目，并作用于移动互联网，为这个星球减少能耗尽些绵薄之力<sup class='md-footnote'><a
+                    href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup>。</p>
+        <h2><a name='header-n12' class='md-header-anchor '></a>我们能做些什么？</h2>
+        <ul>
+            <li>提供一些入门示例，让对这门语言感兴趣的人快速入门<sup class='md-footnote'><a href='#dfref-footnote-3'
+                        name='ref-footnote-3'>3</a></sup>（平台依赖部分的代码整理工作量会非常大）</li>
+            <li>将以往的项目中的高质量模块，抽离出来集中测试，反复review。</li>
+            <li>然后在以上模块的基础上，建立一些高频使用的公共项目。</li>
+        </ul>
+        <h2><a name='header-n20' class='md-header-anchor '></a>你可以</h2>
+        <ul>
+            <li>帮忙翻译本篇文字，用你所使用的母语，以吸引全球更多的开发者加入。（当前，我们迫切需要一个英文版）</li>
+            <li>帮忙找茬，从现有的所有代码中寻找bug并提交修改建议。</li>
+            <li>提供反例代码（错误的范例），编译不过去那种也行，尽量把<strong>坑</strong>都挖出来，并让所有人都知道。毕竟C语言的坑太多，你懂的。</li>
+            <li>帮忙编写每个目录的makefile文件。这样就不用一个个程序单独编译了。</li>
+            <li>造轮子。从你当前和过去的项目中提取你认为的优秀的模块放到此处，并发计算、多进程、网络通信、简单加密算法、P2P模块，急缺。</li>
+            <li>编写测试用例（最好以源代码的方式提交），脚本和代码均可。用来证明现存的模块是安全可靠并高效的，如果不是，那我们就得不断修正它，直到每一个模块变得无法修改。</li>
+            <li>甚至也可以是一个未实现的idea，写下你的伟大想法，我们帮你实现。</li>
+        </ul>
+        <h2><a name='header-n36' class='md-header-anchor '></a>这个项目适合那些群体？</h2>
+        <ul>
+            <li>对 C语言感兴趣并有着偏执喜爱的开发者和相关专业的学生</li>
+            <li>希望为自己（而不是为企业）编写些代码，做些项目从而方便日常生活的从业者。</li>
+            <li>暂时放下工作负担，赋闲在家的从业人员。</li>
+            <li>及其他</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h2><a name='header-n47' class='md-header-anchor '></a>对于一些误区的解读：</h2>
+        <ul>
+            <li>C不等于VC++也不代表MFC（Microsoft Foundation Classes）、win32 API，它是一个有着ISO标准的独立程序语言。</li>
+            <li>C语言生成的程序都是基于<strong>命令行</strong><sup class='md-footnote'><a href='#dfref-footnote-4'
+                        name='ref-footnote-4'>4</a></sup>的，没有菜单、没有按钮、也无法使用鼠标等外设。</li>
+            <li>查询接口函数去MSDN（Microsoft Developer Network） ? 最好不要那么做，因为你查询到的很可能是windows的接口，而不是通用的C标准接口</li>
+            <li>ISO C的代码事实上是跨平台的，完全可以做到一次编码，多平台编译。</li>
+        </ul>
+        <h2><a name='header-n57' class='md-header-anchor '></a>编写C语言的工具使用很复杂，学习成本很高？</h2>
+        <p>不，恰恰相反。事实上，要开发一个C语言程序，只需要两件工具就够了。</p>
+        <ul>
+            <li>一个编辑器<sup class='md-footnote'><a href='#dfref-footnote-5'
+                        name='ref-footnote-5'>5</a></sup>（就像，windows下的记事本）</li>
+            <li>一个编译器（在Unix / Linux中是gcc；在Windows中是cl，前提是你得装好Mircosoft visual studio；在Mac上我不知道，因为没用过苹果的机器，或许是clang）。
+            </li>
+        </ul>
+        <p>至于调试器，得了吧那是用来擦屁股的。活不干净，代码漏洞百出就只能用用调试器来擦屁股，虽然这话不中听，但却是事实。修炼多年的老手只对自己的代码负责，不用等到出了事情再来找问题在哪里，调试器就成了摆设。所以关于如何调试，我们最后再来关注也不迟。
+        </p>
+        <p>每当我想到这个再简单不过的事实，就只能哭笑不得，有多少老师教不是一上来就让你用VC的？有多少高校的计算机系的教程不是用的谭浩强<sup class='md-footnote'><a
+                    href='#dfref-footnote-6'
+                    name='ref-footnote-6'>6</a></sup>教授的《C语言程序设计》，这本教材编写的初衷似乎是想让计算机专业的学生觉得好像C语言只能用来解数学题。经历过这些的人无不是一入门就被当头打了一棒子，从此误入歧途。
+        </p>
+        <p>抄来的一个段子：</p>
+        <blockquote>
+            <p>某一天人人上疯转一条状态 “C语言之父去世了”<br />下面某回复 - “啊，谭浩强死了？！”</p>
+        </blockquote>
+        <h3><a name='header-n69' class='md-header-anchor '></a>指针一定很难搞懂吧？</h3>
+        <p>事实上，指针的用法也分初、中、高级，按部就班地使用一般不会产生太大的副作用，也更加考验使用指针之人的细心程度。</p>
+        <p>我的信念是：正是指针使得C威力无穷。有些任务用其他语言也可以实现，但C能够更有效地实现；有些任务无法用其他语言实现，如直接访问硬件（如内存），但C却可以。想要成为一名优秀的C程序员，对指针有一个深入而完整的理解是先决条件。
+        </p>
+        <h3><a name='header-n72' class='md-header-anchor '></a>需要教材么？</h3>
+        <p>当然，就我所知有一些教程确实写得不错，不过基本都是中国以外的。但是我不确定它们是否能跟上近些年来频繁更新的ISO标准（C++语言的ISO标准更新得更快），我们更建议你拥有一份最新的C语言的ISO标准文档，因为它代表了未来C编译器的发展趋势，而编译器决定了C的语法。
+        </p>
+        <p>但由于某些编译器和标准库相对于标准的滞后，所以现阶段，我们所整理的代码全部都基于C11（<a href='https://www.iso.org/standard/57853.html'>ISO/IEC
+                9899:2011</a>）标准编译通过，虽然这不是已知最新的标准，但未来我们一定会用更新的标准来编译我们的代码，以便使它与时俱进。</p>
+        <h3><a name='header-n76' class='md-header-anchor '></a>目录结构</h3>
+        <p>.<br />├── ABC #Basic knowledge<br />├── ARRAYS<br />├── ADVANCED<br />├── CMD_LINE<br />├── DATETIME #Get
+            date and time from system<br />├── FILES #How to read and wirte file in harddisk<br />├── FUNCTION<br />├──
+            MACROS<br />├── MATH<br />├── MEMORY<br />├── STRINGS<br />├── WHEELS<br />├── Misc<br />├──
+            multi-files_demo<br />├── Algorithms<br />├── atomic&amp;thread<br />├── Platform_dependence<br />│ ├──
+            Like_Unix<br />│ <del>├── Macintosh</del><br />│ └── Windows<br />└── </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <blockquote>
+            <p>“一切伟大的行动和思想，都有一个微不足道的开始。”
+                ——阿尔贝·加缪</p>
+        </blockquote>
+        <p>联系方式：
+            Email: <a href='mailto:wind.of.everest@yandex.com' target='_blank'
+                class='url'>wind.of.everest@yandex.com</a></p>
+        <h2><a name='header-n83' class='md-header-anchor '></a>参考阅读：</h2>
+        <p><a href='https://www.zhihu.com/question/53613628/answer/1244608344'>为什么美国程序员工作比中国程序员工作轻松、加班少？</a></p>
+        <p><a href='https://www.zhihu.com/question/26742539/answer/537971734'>为什么现在国内各大高校仍选用谭浩强的《C 程序设计》为教材？</a></p>
+        <p>&nbsp;</p>
+        <div class='footnotes-area'>
+            <hr />
+            <div class='footnote-line'><span class='md-fn-count'>1</span>
+                不妨设计一个实验，收集若干硬件配置相仿的iPhone和安卓机，安装相同版本的微信，同时去抢同一个红包，统计每次首先抢到红包的终端。也许这样的实验可以说明一定的问题。<a
+                    name='dfref-footnote-1' href='#ref-footnote-1' title='回到文档' class='reversefootnote'>↩</a></div>
+            <div class='footnote-line'><span class='md-fn-count'>2</span>
+                当前的智能手机电池容量是以前功能手机的数倍，但续航时间却是以前的几分之一。便携和嵌入式设备本来就应该是低功耗的，但智能手机一定是个反例，如果能从软件层面提升效能减少功耗，一定是件功德无量的事情。<a
+                    name='dfref-footnote-2' href='#ref-footnote-2' title='回到文档' class='reversefootnote'>↩</a></div>
+            <div class='footnote-line'><span class='md-fn-count'>3</span>
+                我个人认为，学习一门编程语言的最好方式，就是直接大量阅读高质量的源代码，直击该语言的本质。毕竟互联网基建时代早已经结束了，没必要反复造轮子。<a name='dfref-footnote-3'
+                    href='#ref-footnote-3' title='回到文档' class='reversefootnote'>↩</a></div>
+            <div class='footnote-line'><span class='md-fn-count'>4</span>
+                在没有图形界面的时代，鼠标是不存在的。所有的计算机程序都是命令行的，只能靠键盘输入命令来运行程序。其实从本质上来说，目前所有计算机程序无需图形界面也照样能够计算出结果。图形化的诞生只是降低了计算机的使用门槛，得以推广至大多数普通家庭，从而走进大众生活。<a
+                    name='dfref-footnote-4' href='#ref-footnote-4' title='回到文档' class='reversefootnote'>↩</a></div>
+            <div class='footnote-line'><span class='md-fn-count'>5</span>
+                当然，有一些目前流行的跨平台编辑器从功能上来说更加强大，例如VScode加cpptools插件，还有Codelite这种小众编辑器用来阅读和修改代码都是不错的选择。<a
+                    name='dfref-footnote-5' href='#ref-footnote-5' title='回到文档' class='reversefootnote'>↩</a></div>
+            <div class='footnote-line'><span class='md-fn-count'>6</span> <a
+                    href='https://www.zhihu.com/question/22793863'>谭浩强在程序员圈子里的口碑如何？为什么？</a><a name='dfref-footnote-6'
+                    href='#ref-footnote-6' title='回到文档' class='reversefootnote'>↩</a></div>
+        </div>
+    </div>
+</body>
+
+</html>
